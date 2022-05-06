@@ -11,9 +11,9 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print('PyCharm'," HEll0 EVERYONE")
+    print('PyCharm', " HEll0 EVERYONE")
     print('STRING HERE \n')
     m = 10
-    print(m,' var m \n')
+    print(m, ' var m \n')
     print('CATS AND DOGS LIVE IN PEACE')
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
