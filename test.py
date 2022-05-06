@@ -1,4 +1,4 @@
-print('Hello tetst.py')
+print('Hello test.py')
 f = 'fgfggfgf'
 f.index('fgg', 0, 20)
 if f in 'fgfgggf':
