@@ -15,5 +15,6 @@ if __name__ == '__main__':
     print('STRING HERE \n')
     m = 10
     print(m,' var m \n')
+    print('TYGYDYK ' ,' CAT SAYS MYAU')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
