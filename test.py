@@ -47,4 +47,32 @@ def print_if_true(thing, check):
     '''
     if check:
         print(thing)
-help()
+
+
+def document_it(func):
+    def new_function(*args, **kwargs):
+        print('Running function:', func.__name__)
+        print('Keyword arguments:', kwargs)
+        result = func(*args, **kwargs)
+        print('Result:', result)
+        return result
+
+    return new_function
+
+
+@document_it
+def add_ints(*a, **b):
+    print(a)
+    print(b)
+    if a != () and b != {}:
+        return type(a) and type(b)
+    else:
+        return 'list and dictionary (array and hash in perl) noy full'
+    # return type(a)  type(b)
+
+
+dics = {'f': 5, 'r': 6}
+print(add_ints(*(3, 4), **dics))
+
+cooler_add_ints = document_it(add_ints)
+cooler_add_ints(*(3, 4),**{'f': 5, 'r': 6})
