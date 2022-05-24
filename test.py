@@ -62,17 +62,47 @@ def document_it(func):
 
 @document_it
 def add_ints(*a, **b):
+    '''This is function that will be decarated with anoether one
+    function mashala'''
     print(a)
     print(b)
     if a != () and b != {}:
         return type(a) and type(b)
     else:
-        return 'list and dictionary (array and hash in perl) noy full'
+        print('My TUTA')
+        return add_ints.__name__
     # return type(a)  type(b)
 
 
-dics = {'f': 5, 'r': 6}
-print(add_ints(*(3, 4), **dics))
-
 cooler_add_ints = document_it(add_ints)
-cooler_add_ints(*(3, 4),**{'f': 5, 'r': 6})
+cooler_add_ints(*(3, 4))
+print('------\n\n')
+dics = {'f': 5, 'r': 6}
+print(add_ints(*(3, 4)))
+
+
+class Word():
+    def __init__(self, text):
+        self.text = text
+
+    def __eq__(self, word2):
+        ...
+        return self.text.lower() == word2.text.lower()
+
+
+first = Word('ha')
+second = Word('HA')
+third = Word('eh')
+
+print(third == first)
+print(repr(first))
+
+
+
+def unicode_test(value):
+    import unicodedata
+    name = unicodedata.name(value)
+    value2 = unicodedata.lookup(name)
+    print('value="%s", name="%s", value2="%s"' % (value, name, value2))
+
+unicode_test('A')
