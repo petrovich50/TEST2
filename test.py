@@ -98,11 +98,22 @@ print(third == first)
 print(repr(first))
 
 
-
 def unicode_test(value):
     import unicodedata
     name = unicodedata.name(value)
     value2 = unicodedata.lookup(name)
     print('value="%s", name="%s", value2="%s"' % (value, name, value2))
 
-unicode_test('A')
+
+unicode_test('\u0115')
+# print('THIS IS A ','\N{LATIN SMALL LETTER ESH}',' LETTER')
+# fin = open('bfile', 'rb')
+# d = fin.read()
+
+import locale
+from datetime import date
+
+halloween = date(2019, 10, 31)
+for lang_country in ['en_us', 'fr_fr', 'de_de', 'es_es', 'is_is']:
+    locale.setlocale(locale.LC_TIME, lang_country)
+    halloween.strftime('%A, %B %d')
